@@ -1,0 +1,226 @@
+/* components/Auth.css - Login & Signup Styles */
+/* Perfectly matched with App.css design system */
+
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: auto;
+  background: var(--bg-secondary);
+  padding: 2rem 1rem;
+}
+
+.auth-card {
+  background: var(--bg-primary);
+  padding: 1.75rem 2rem;
+  border-radius: 1rem;
+  box-shadow: var(--shadow-md);
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid var(--border-light);
+  animation: slideUp 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.auth-card h2 {
+  text-align: center;
+  margin-bottom: 1.25rem;
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.auth-subtitle {
+  text-align: center;
+  color: var(--text-tertiary);
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  letter-spacing: -0.3px;
+}
+
+.form-group input {
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--border-light);
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--text-primary);
+  background: var(--bg-primary);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.form-group input::placeholder {
+  color: var(--text-tertiary);
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--accent-teal);
+  background: var(--bg-primary);
+  box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.1);
+}
+
+.form-group input.error {
+  border-color: var(--accent-rose);
+  background: rgba(244, 63, 94, 0.03);
+}
+
+.form-group input.error:focus {
+  box-shadow: 0 0 0 3px rgba(244, 63, 94, 0.1);
+}
+
+.error-text {
+  color: var(--accent-rose);
+  font-size: 0.8rem;
+  margin-top: 0.375rem;
+  font-weight: 500;
+}
+
+.auth-btn {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+  color: white;
+  border: none;
+  padding: 0.875rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-top: 0.5rem;
+  letter-spacing: -0.3px;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.25);
+}
+
+.auth-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.35);
+}
+
+.auth-btn:active {
+  transform: translateY(0);
+}
+
+.auth-switch {
+  text-align: center;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-light);
+}
+
+.auth-switch p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.link-btn {
+  background: none;
+  border: none;
+  color: var(--accent-teal);
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-left: 0.25rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  padding: 0;
+}
+
+.link-btn:hover {
+  color: var(--primary-light);
+  text-decoration: underline;
+}
+
+.demo-accounts {
+  margin-top: 1.25rem;
+  padding: 1rem;
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.05) 0%, rgba(16, 185, 129, 0.05) 100%);
+  border-radius: 0.5rem;
+  font-size: 0.85rem;
+  border: 1px solid rgba(6, 182, 212, 0.15);
+}
+
+.demo-accounts h4 {
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.demo-accounts p {
+  margin: 0.25rem 0;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.demo-accounts strong {
+  color: var(--accent-teal);
+  font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .auth-container {
+    padding: 1rem;
+  }
+
+  .auth-card {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .auth-card h2 {
+    font-size: 1.35rem;
+  }
+
+  .auth-form {
+    gap: 0.875rem;
+  }
+
+  .form-group input {
+    padding: 0.7rem 0.875rem;
+  }
+
+  .auth-btn {
+    padding: 0.8rem 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 1.25rem 1rem;
+  }
+
+  .auth-card h2 {
+    font-size: 1.25rem;
+  }
+}
